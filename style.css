@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #241f31;
+}
+
+#map {
+    background-color: #3d3846;
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+    padding: 0.5rem;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0.5rem 5rem #00000044, 0 0.5rem 0.5rem #00000044;
+}
+
+.row {
+    display: flex;
+}
+
+
+.card-down{
+    transform: rotateY(90deg);
+    animation-name: flipDown;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.card-up{
+    transform: rotateY(0deg);
+    animation-name: flipUp;
+    animation-duration: 0.2s;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.card {
+    width: 8rem;
+    height: 8rem;
+    background-color: #ff7800;
+
+    z-index: 1;
+
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0.25rem 0.25rem #00000044, inset 0 -0.25rem  #c64600;
+    cursor: pointer;
+
+    transform: none;
+}
+
+.show {
+    width: 8rem;
+    height: 8rem;
+    background-color: #241f31;
+
+    z-index: 0;
+
+    border-radius: 0.5rem;
+
+    box-shadow: inset 0 0.25rem 0.25rem #0000006e;
+    box-shadow: inset 0 0.5rem 0.75rem #00000044;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:4rem ;
+
+    /*box-shadow: inset 0 -0.25rem #c64600;*/
+
+    transform: none;
+}
+
+.field {
+    position: relative;
+
+    width: 8rem;
+    height: 8rem;
+
+    margin: 0.5rem;
+}
+
+.field > * {
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+#reset {
+    position: absolute;
+    margin: 1rem;
+    background-color: #ff7800;
+    color: #241f31;
+    padding: 0.4rem;
+    width: 4rem;
+    height: 4rem;
+
+    top: 0;
+    left: 0;
+
+    font-size: 2rem;
+
+    border: none;
+    border-radius: 10rem;
+
+    cursor: pointer;
+
+    transition: 200ms;
+}
+
+#reset:hover {
+    background-color: #ffa348;
+
+    box-shadow: 0 0 0.5rem  #ffa34856;
+}
+
+.github {
+    color: #ff7800;
+    position: absolute;
+    margin: 1rem;
+
+    font-size: 4rem;
+
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+
+    transition: 200ms;
+}
+
+.github:hover {
+    color: #ffa348;
+
+    text-shadow: 0 0 0.5rem  #ffa34856;
+}
+
+
+@keyframes flipUp {
+    0%   {
+        transform: scale(100%);
+    }
+    100% {
+        
+        transform: scale(0);
+    }
+  }
+
+  @keyframes flipDown {
+    0%   {
+
+        transform: scale(0)
+    
+    }
+    100% {
+
+        transform: scale(100%);
+        
+    }
+  }
