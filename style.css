@@ -63,6 +63,7 @@ body {
     transform: none;
 }
 
+
 .show {
     width: 8rem;
     height: 8rem;
@@ -171,3 +172,33 @@ body {
         
     }
   }
+
+
+  
+@media screen and (max-width: 800px) {
+    .card {
+        width: 18vw;
+        height: 18vw;
+        border-radius: 2vw;
+        transform: none;
+    }
+    .show {
+        width: 18vw;
+        height: 18vw;
+    
+        z-index: 0;
+        font-size: 2rem ;
+    
+        transform: none;
+    }
+    
+    .field {
+        position: relative;
+    
+        width: 18vw;
+        height: 18vw;
+    
+        margin: 2vw;
+    }
+    
+}
